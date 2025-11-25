@@ -26,9 +26,30 @@ public class PortfolioController {
         return ResponseEntity.ok("Message received");
     }
 
-    @GetMapping("/about")  
+    @GetMapping("/about")
     public String about() {
         return "I am a Full Stack Developer (Java + React)...";
+    }
+
+    @GetMapping("/skills")
+    public String[] skills() {
+        return new String[]{
+            "HTML", "CSS", "JavaScript", "ReactJS", "Core Java",
+            "J2EE", "JSP", "Servlets", "Spring Core",
+            "Spring Boot", "Microservices Architecture",
+            "API Gateway", "Service Registry",
+            "Git", "GitHub", "Cloud Basics"
+        };
+    }
+
+    @GetMapping("/projects")
+    public String[] projects() {
+        return new String[]{
+            "Employee CRUD App",
+            "JWT Login App",
+            "Mini E-Commerce",
+            "Portfolio Website"
+        };
     }
 }
 
