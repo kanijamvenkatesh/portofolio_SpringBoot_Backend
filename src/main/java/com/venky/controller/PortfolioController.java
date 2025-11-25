@@ -9,8 +9,9 @@ import com.venky.service.ContactService;
 @RestController
 @RequestMapping("/portfolio")
 @CrossOrigin(origins = {
-    "http://localhost:3000",
-    "https://portfolio-frontend-7wgp.onrender.com"
+		"https://portfolio-frontend-1-zzgd.onrender.com",
+    "http://localhost:3000"
+    
 })
 public class PortfolioController {
 
