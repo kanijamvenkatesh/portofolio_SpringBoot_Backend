@@ -10,7 +10,7 @@ import com.venky.service.ContactService;
 @RequestMapping("/portfolio")
 @CrossOrigin(origins = {
     "http://localhost:3000",
-    "https://your-frontend.onrender.com"
+    "https://portfolio-frontend-7wgp.onrender.com"
 })
 public class PortfolioController {
 
@@ -20,17 +20,15 @@ public class PortfolioController {
         this.service = service;
     }
 
-    // Correct path
     @PostMapping("/contact")
     public ResponseEntity<String> saveMessage(@RequestBody ContactMessage form) {
-        service.save(form);  // save to DB
+        service.save(form);
         return ResponseEntity.ok("Message received");
     }
 
-    @GetMapping("/about")
+    @GetMapping("/about")  
     public String about() {
         return "I am a Full Stack Developer (Java + React)...";
     }
 }
-
 
